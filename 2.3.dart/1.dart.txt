@@ -1,32 +1,39 @@
-mport 'dart:io';
+import 'dart:io';
+
 void main() {
-var employees=<int,Map<String,dynamic>>{};
-for (int i=1;i<=3;i++) 
-{
-print('Enter information of Employee $i:');
-var id=int.parse(getInput('ID'));
-var name=getInput('Name');
-var age=int.parse(getInput('Age'));
-var salary=double.parse(getInput('Salary'));
-var employee=Map<String,dynamic>.fromEntries([
-MapEntry('id', id),
-MapEntry('name', name),
-MapEntry('age', age),
-MapEntry('salary', salary),
-]
-);
-employees[id] = employee;
-}
-print('\nAll Employees Information:');
-employees.forEach((id, employee) {
-print('ID: $id');
-print('Name: ${employee['name']}');
-print('Age: ${employee['age']}');
-print('Salary: ${employee['salary']}');
-print('\n');
-});
+
+    var employees=<int,Map<String,dynamic>> {};
+
+    for (int i=1; i<=3; i++) {
+        print('Enter information of Employee $i:');
+
+        var id=int.parse(getInput('ID'));
+        var name=getInput('Name');
+        var age=int.parse(getInput('Age'));
+        var salary=double.parse(getInput('Salary'));
+        var employee=Map<String,dynamic>.fromEntries([
+
+                         MapEntry('id', id),
+                         MapEntry('name', name),
+                         MapEntry('age', age),
+                         MapEntry('salary', salary),
+                     ]
+                                                    );
+        employees[id] = employee;
+    }
+    print('\nAll Employees Information:');
+    employees.forEach((id, employee) {
+        print('ID: $id');
+        print('Name: ${employee['name']}');
+        print('Age: ${employee['age']}');
+        print('Salary: ${employee['salary']}');
+        print('\n');
+    });
 }
 String getInput(String p) {
-stdout.write('$p: ');
-return stdin.readLineSync()!;
+    stdout.write('$p: ');
+    return stdin.readLineSync()!;
 }
+
+
+
