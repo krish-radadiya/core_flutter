@@ -1,12 +1,22 @@
-void main() {
-  List num = [0, 1, 2, 3, 4, 5, 10, 12, 15];
-  int largest = num[0];
+import 'dart:io';
 
-  for (int i = 1; i < num.length; i++) {
-    if (num[i] > largest) {
-      largest = num[i];
+void main() {
+  List<int> allNumbers = [];
+
+  print("Enter any 5 numbers: ");
+  
+  for (int i = 0; i < 5; i++) {
+    String userInput = stdin.readLineSync()!;
+    int number = int.parse(userInput);
+    allNumbers.add(number);
+  } 
+
+  int largestNumber = allNumbers[0];
+  for (int i = 1; i < allNumbers.length; i++) {
+    if (allNumbers[i] > largestNumber) {
+      largestNumber = allNumbers[i];
     }
   }
 
-  print("The largest number in array: $largest");
+  print('\nThe largest number is: $largestNumber');
 }
