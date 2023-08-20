@@ -12,7 +12,7 @@ void main () {
         print("4. View product");
         print("5. Exit");
 
-        stdout.write("Enter your choice: ");
+        stdout.write("Enter your product choice : ");
         int choice = int.parse(stdin.readLineSync()!);
         print("\n");
 
