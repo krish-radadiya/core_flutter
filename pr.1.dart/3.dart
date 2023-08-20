@@ -5,7 +5,7 @@ void main () {
 
     while (true) {
         print("$product\n");
-        print("Menu:");
+        print("product:");
         print("1. Add product");
         print("2. Update product");
         print("3. Delete product");
